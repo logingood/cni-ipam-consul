@@ -1,9 +1,14 @@
 # consul IP address manager
 
-consul IPAM allocates IPv4 and IPv6 addresses out of a specified address range.
+Consul IPAM allocates IPv4 and IPv6 addresses out of a specified address range and stores allocations in [Consul](https://www.consul.io/) KV store backend. 
 
 Plugin is based on the code of [CNI IPAM host-local plugin](https://github.com/containernetworking/cni/tree/master/plugins/ipam/host-local) but with different Backend type.
 Allocator code was taken as is, as long as this README. Main.go has slight modifications. Config.go was moved into separate module to share the configuration with backend code.
+
+# TODO
+- If network already defined from consul use it for allocation regardless setting in the client.
+- Create ```*Store``` type struct and modify interface, which will to support disk backend from [CNI IPAM host-local plugin](https://github.com/containernetworking/cni/tree/master/plugins/ipam/host-local) and consul backend depending on the plugin configuration. That will allow to use host-local plugin with different backends. 
+- Store mac address in Consul as well. That could be useful for EVPN solution with [BaGPipe CNI plugin](https://github.com/murat1985/bagpipe-bgp).
 
 ## Usage
 
