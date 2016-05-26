@@ -5,10 +5,59 @@ Consul IPAM allocates IPv4 and IPv6 addresses out of a specified address range a
 Plugin is based on the code of [CNI IPAM host-local plugin](https://github.com/containernetworking/cni/tree/master/plugins/ipam/host-local) but with different Backend type.
 Allocator code was taken as is, as long as this README. Main.go has slight modifications. Config.go was moved into separate module to share the configuration with backend code.
 
-# TODO
+## TODO
 - If network already defined from consul use it for allocation regardless setting in the client.
 - Create ```*Store``` type struct and modify interface, which will to support disk backend from [CNI IPAM host-local plugin](https://github.com/containernetworking/cni/tree/master/plugins/ipam/host-local) and consul backend depending on the plugin configuration. That will allow to use host-local plugin with different backends. 
 - Store mac address in Consul as well. That could be useful for EVPN solution with [BaGPipe CNI plugin](https://github.com/murat1985/bagpipe-bgp).
+
+## Install
+
+ption 1
+Clone repository within
+````
+git clone https://github.com/murat1985/cni-ipam-consul cni-ipam-consul
+````
+Then build plugin:
+```
+cd cni-ipam-consul
+
+mkdir -p gopath/src/github.com/murat1985/cni-ipam-consul
+mkdir bin
+
+GOPATH=$(pwd)/gopath
+GOBIN=$(pwd)/bin
+
+ln -s ../../../.. gopath/src/github.com/murat1985/cni-ipam-consul
+go install github.com/murat1985/cni-ipam-consul
+```
+Plugin would be install into $GOBIN, e.g.:
+```
+~/bagpipe/bin/cni-ipam-consul
+```
+
+### Option 2
+The second way to install plugin altogether with other CNI plugins and IPAM plugins. Clone CNI repositority: [CNI](https://github.com/containernetworking/cni)
+
+Make sure that GOPATH environment variable is set
+
+```
+cd $GOPATH
+git clone https://github.com/containernetworking/cni
+cd cni/plugins/ipam
+```
+
+Clone bagpipe CNI plugin into plugins/main/cni-ipam-consul
+
+```
+git clone https://github.com/murat1985/cni-ipam-consul cni-ipam-consul
+cd ../../
+```
+
+Build plugins
+
+```
+./build
+```
 
 ## Usage
 
