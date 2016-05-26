@@ -12,24 +12,12 @@ Allocator code was taken as is, as long as this README. Main.go has slight modif
 
 ## Install
 
-ption 1
-Clone repository within
+### Option 1
+Use go get for installation
 ````
-git clone https://github.com/murat1985/cni-ipam-consul cni-ipam-consul
+git get github.com/murat1985/cni-ipam-consul
 ````
-Then build plugin:
-```
-cd cni-ipam-consul
 
-mkdir -p gopath/src/github.com/murat1985/cni-ipam-consul
-mkdir bin
-
-GOPATH=$(pwd)/gopath
-GOBIN=$(pwd)/bin
-
-ln -s ../../../.. gopath/src/github.com/murat1985/cni-ipam-consul
-go install github.com/murat1985/cni-ipam-consul
-```
 Plugin would be install into $GOBIN, e.g.:
 ```
 ~/bagpipe/bin/cni-ipam-consul
