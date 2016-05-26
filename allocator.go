@@ -20,7 +20,7 @@ import (
 
 	"github.com/containernetworking/cni/pkg/ip"
 	"github.com/containernetworking/cni/pkg/types"
-	"github.com/containernetworking/cni/plugins/ipam/host-local/backend"
+	"github.com/murat1985/cni-ipam-consul/backend"
 	"github.com/murat1985/cni-ipam-consul/config"
 )
 
