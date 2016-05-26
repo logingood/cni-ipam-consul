@@ -15,7 +15,7 @@ Allocator code was taken as is, as long as this README. Main.go has slight modif
 ### Option 1
 Use go get for installation
 ````
-git get github.com/murat1985/cni-ipam-consul
+go get github.com/murat1985/cni-ipam-consul
 ````
 
 Plugin would be install into $GOBIN, e.g.:
