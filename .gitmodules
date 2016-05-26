@@ -1,0 +1,3 @@
+[submodule "vendor/github.com/containernetworking/cni"]
+	path = vendor/github.com/containernetworking/cni
+	url = git://github.com/containernetworking/cni
