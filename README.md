@@ -107,7 +107,7 @@ f81d4fae-7dec-11d0-a765-00a0c91e6bf6
 {
 	"name": "ipv6",
     "ipam": {
-		    "type": "consul",
+        "type": "consul",
         "consul_addr": "127.0.0.1",
         "consul_port": "8500",
         "dc": "dc1",
@@ -117,7 +117,7 @@ f81d4fae-7dec-11d0-a765-00a0c91e6bf6
         "routes": [
           { "dst": "3ffe:ffff:0:01ff::1/64" }
         ]
-	}
+}
 }
 ```
 
@@ -125,16 +125,16 @@ f81d4fae-7dec-11d0-a765-00a0c91e6bf6
 {
   "name": "ipv4",
 	"ipam": {
-		"type": "consul",
+    "type": "consul",
     "consul_addr": "127.0.0.1",
     "consul_port": "8500",
     "dc": "dc1",
-		"subnet": "203.0.113.1/24",
-		"range-start": "203.0.113.10",
-		"range-end": "203.0.113.20",
-		"routes": [
-			{ "dst": "203.0.113.0/24" }
-		]
-	}
+    "subnet": "203.0.113.1/24",
+    "range-start": "203.0.113.10",
+    "range-end": "203.0.113.20",
+    "routes": [
+      { "dst": "203.0.113.0/24" }
+    ]
+  }
 }
 ```
