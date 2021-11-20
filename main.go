@@ -15,8 +15,8 @@
 package main
 
 import (
-	"github.com/murat1985/cni-ipam-consul/backend/consul"
-	"github.com/murat1985/cni-ipam-consul/config"
+	"github.com/logingood/cni-ipam-consul/backend/consul"
+	"github.com/logingood/cni-ipam-consul/config"
 
 	"github.com/containernetworking/cni/pkg/skel"
 	"github.com/containernetworking/cni/pkg/types"

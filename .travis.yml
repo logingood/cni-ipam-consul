@@ -1,17 +1,15 @@
 language: go
-dist: trusty
+dist: focal
 go: 
-  - 1.5.3
-  - 1.6
+  - 1.17.1
   - tip
 env:
   global:
     - TOOLS_CMD=golang.org/x/tools/cmd
     - PATH=$GOROOT/bin:$PATH
-    - GO15VENDOREXPERIMENT=1
 sudo: required
 install:
-  - go get github.com/murat1985/cni-ipam-consul
+  - go get github.com/logingood/cni-ipam-consul
 script: 
   - ./test
 notifications:

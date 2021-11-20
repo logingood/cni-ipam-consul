@@ -14,7 +14,7 @@ import (
 
 	"github.com/containernetworking/cni/pkg/types"
 	"github.com/hashicorp/consul/api"
-	"github.com/murat1985/cni-ipam-consul/config"
+	"github.com/logingood/cni-ipam-consul/config"
 )
 
 type Store struct {

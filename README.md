@@ -8,14 +8,14 @@ Allocator code was taken as is, as long as this README. Main.go has slight modif
 ## TODO
 - If network already defined from consul use it for allocation regardless setting in the client.
 - Create ```*Store``` type struct and modify interface, which will to support disk backend from [CNI IPAM host-local plugin](https://github.com/containernetworking/cni/tree/master/plugins/ipam/host-local) and consul backend depending on the plugin configuration. That will allow to use host-local plugin with different backends. 
-- Store mac address in Consul as well. That could be useful for EVPN solution with [BaGPipe CNI plugin](https://github.com/murat1985/bagpipe-bgp).
+- Store mac address in Consul as well. That could be useful for EVPN solution with [BaGPipe CNI plugin](https://github.com/logingood/bagpipe-bgp).
 
 ## Install
 
 ### Option 1
 Use go get for installation
 ````
-go get github.com/murat1985/cni-ipam-consul
+go get github.com/logingood/cni-ipam-consul
 ````
 
 Plugin would be install into $GOBIN, e.g.:
@@ -37,7 +37,7 @@ cd cni/plugins/ipam
 Clone bagpipe CNI plugin into plugins/main/cni-ipam-consul
 
 ```
-git clone https://github.com/murat1985/cni-ipam-consul cni-ipam-consul
+git clone https://github.com/logingood/cni-ipam-consul cni-ipam-consul
 cd ../../
 ```
 
