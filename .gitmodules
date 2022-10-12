@@ -1,9 +1,0 @@
-[submodule "vendor/github.com/containernetworking/cni"]
-	path = vendor/github.com/containernetworking/cni
-	url = git://github.com/containernetworking/cni
-[submodule "vendor/github.com/murat1985/cni-ipam-consul"]
-	path = vendor/github.com/murat1985/cni-ipam-consul
-	url = git://github.com/murat1985/cni-ipam-consul
-[submodule "vendor/github.com/hashicorp/consul"]
-	path = vendor/github.com/hashicorp/consul
-	url = git://github.com/hashicorp/consul
